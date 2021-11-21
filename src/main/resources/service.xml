@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="shop" class="com.zaripov.core.xml.CarShop" primary="true">
+        <constructor-arg type="com.zaripov.core.xml.Lada" ref="lada"/>
+        <constructor-arg type="com.zaripov.core.xml.Bugati" ref="bugati"/>
+    </bean>
+
+    <bean id="lada" class="com.zaripov.core.xml.Lada"
+    scope="singleton">
+    </bean>
+
+    <bean id="bugati" class="com.zaripov.core.xml.Bugati"
+    scope="prototype">
+    </bean>
+
+</beans>
